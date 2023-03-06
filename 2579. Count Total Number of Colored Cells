@@ -1,0 +1,17 @@
+class Solution {
+public:
+    long long coloredCells(int n) {
+        
+        long long int ans=0;
+        long long int product=(n-1)*2;
+        
+        if(n==1){
+            ans=1;
+            return ans;
+        }
+        else{
+            ans=(product*n) + 1;
+            return ans;
+        }
+    }
+};
