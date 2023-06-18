@@ -1,0 +1,25 @@
+class Solution {
+public:
+    int distanceTraveled(int mainTank, int additionalTank) {
+        
+        int count = 0;
+        
+        while(mainTank>=5){
+            
+            mainTank -= 5;
+            
+            count++;
+            
+                if(additionalTank >= 1){
+                    mainTank += 1;
+                    additionalTank--;
+                }
+          
+        }
+        
+        int ans = count * 50;
+        ans += 10*mainTank;
+        
+        return ans;
+    }
+};
