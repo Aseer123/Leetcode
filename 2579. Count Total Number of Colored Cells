@@ -7,7 +7,7 @@ public:
         
         if(n==1){
             ans=1;
-            return ans;
+                    return ans;
         }
         else{
             ans=(product*n) + 1;
