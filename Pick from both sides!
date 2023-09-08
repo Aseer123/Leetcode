@@ -1,0 +1,29 @@
+https://www.interviewbit.com/problems/pick-from-both-sides/
+
+
+int Solution::solve(vector<int> &A, int B) {
+    
+    int maxi = INT_MIN;
+    
+    int n = A.size();
+    int cur_sum = 0;
+    for(int i=0;i<B;i++){
+        cur_sum += A[i];
+    }
+    
+    int inclusive = n-1, exclusive = B-1;
+    
+    while(inclusive >=0 && exclusive>=0){
+        
+        cur_sum += A[inclusive];
+        cur_sum -= A[exclusive];
+        
+        maxi = max(cur_sum,maxi);
+        
+        inclusive--;
+        exclusive--;
+    }
+    
+    return maxi;
+    
+}
